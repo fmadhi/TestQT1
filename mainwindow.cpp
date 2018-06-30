@@ -11,6 +11,8 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->qOpenBottom->setText("Open");
     ui->qCloseBottom->setText("Close");
     qDebug() <<"This is a test";
+    connect(ui->horizontalSlider,SIGNAL(valueChanged(int)),
+            ui->progressBar,SLOT(setValue(int)));
 }
 
 MainWindow::~MainWindow()
